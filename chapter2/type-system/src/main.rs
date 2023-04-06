@@ -21,29 +21,53 @@ fn main() {
     println!("非短絡評価");
     println!("{}", a() | b());
 
-    // 加減乗除
-    let addition: u64 = 1234 + 567;
-    let subtraction: u64 = 678 - 168;
-    let multiplication: u64 = 56 * 146;
-    let division: u64 = 572 / 43;
-    let remainder: u64 = 145 % 23;
-    println!("1234 + 567 = {}", addition);
-    println!("678 - 168  = {}", subtraction);
-    println!("56 * 146   = {}", multiplication);
-    println!("572 / 43   = {}", division);
-    println!("145 % 23   = {}", remainder);
+    // 整数の加減乗除
+    let addition_u: u64 = 1234 + 567;
+    let subtraction_u: u64 = 678 - 168;
+    let multiplication_u: u64 = 56 * 146;
+    let division_u: u64 = 572 / 43;
+    let remainder_u: u64 = 145 % 23;
+    println!("1234 + 567 = {}", addition_u);
+    println!("678 - 168  = {}", subtraction_u);
+    println!("56 * 146   = {}", multiplication_u);
+    println!("572 / 43   = {}", division_u);
+    println!("145 % 23   = {}", remainder_u);
 
-    // 比較
-    let lt: bool = 1234 < 567;
-    let lteq: bool = 678 <= 168;
-    let gt: bool = 56 > 146;
-    let gteq: bool = 572 >= 43;
-    let eq: bool = 145 == 23;
-    println!("1234 < 567 = {}", lt);
-    println!("678 <= 168 = {}", lteq);
-    println!("56 > 146   = {}", gt);
-    println!("572 >= 43  = {}", gteq);
-    println!("145 == 23  = {}", eq);
+    // 整数の比較
+    let lt_u: bool = 1234 < 567;
+    let lteq_u: bool = 678 <= 168;
+    let gt_u: bool = 56 > 146;
+    let gteq_u: bool = 572 >= 43;
+    let eq_u: bool = 145 == 23;
+    println!("1234 < 567 = {}", lt_u);
+    println!("678 <= 168 = {}", lteq_u);
+    println!("56 > 146   = {}", gt_u);
+    println!("572 >= 43  = {}", gteq_u);
+    println!("145 == 23  = {}", eq_u);
+
+    // 浮動小数点数の加減乗除
+    let addition_f: f64 = 1.245 + 0.57;
+    let subtraction_f: f64 = 2.5 - 123.98;
+    let multiplication_f: f64 = 5.6 * 14.6;
+    let division_f: f64 = 57.2 / 43.2;
+    let remainder_f: f64 = 145.6 % 23.4;
+    println!("1.245 + 0.57 = {}", addition_f);
+    println!("2.5 - 123.98 = {}", subtraction_f);
+    println!("5.6 * 14.6   = {}", multiplication_f);
+    println!("57.2 / 43.2  = {}", division_f);
+    println!("145.6 % 23.4 = {}", remainder_f);
+
+    // 浮動小数点数の比較
+    let lt_f: bool = 1.245 < 0.57;
+    let lteq_f: bool = 2.5 <= 123.98;
+    let gt_f: bool = 5.6 > 14.6;
+    let gteq_f: bool = 57.2 >= 43.2;
+    let eq_f: bool = 145.6 == 23.4;
+    println!("1.245 < 0.57  = {}", lt_f);
+    println!("2.5 <= 123.98 = {}", lteq_f);
+    println!("5.6 > 14.6    = {}", gt_f);
+    println!("57.2 >= 43.2  = {}", gteq_f);
+    println!("145.6 == 23.4 = {}", eq_f);
 }
 
 fn a() -> bool {
