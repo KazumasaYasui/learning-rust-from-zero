@@ -89,6 +89,23 @@ fn main() {
     println!("0b1110_0100 | 0b0100_0110 = 0b{:08b}", bit_a | bit_b); // bit_a と bit_b の論理和
     println!("0b1110_0100 & 0b0100_0110 = 0b{:08b}", bit_a & bit_b); // bit_a と bit_b の論理積
     println!("0b1110_0100 ^ 0b0100_0110 = 0b{:08b}", bit_a ^ bit_b); // bit_a と bit_b の排他的論理和
+
+    // フラグや値の埋め込み例
+    let player: u16 =
+        1 |         // 毒攻撃
+        (1 << 1) |  // 攻撃力アップ状態
+        (568 << 2); // 残り体力
+
+    if player & 1 != 0 {
+        println!("毒状態");
+    }
+
+    if player & (1 << 1) != 0 {
+        println!("攻撃力アップ状態");
+    }
+
+    let hp = (player & 0xfffc) >> 2;
+    println!("残り体力: {hp}");
 }
 
 fn a() -> bool {
