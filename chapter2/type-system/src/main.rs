@@ -75,6 +75,13 @@ fn main() {
     let bit_shift_k: u8 = bit_shift_n >> 2; // 2ビット右シフト
     println!("0b0001_1000 << 2 = 0b{:08b}", bit_shift_m);
     println!("0b0001_1000 >> 2 = 0b{:08b}", bit_shift_k);
+
+    // 算術シフトの例
+    let arithmetic_shift_p: i8 = -64; // 0b1100_0000
+    let arithmetic_shift_k: i8 = arithmetic_shift_p >> 2; // 2ビット右算術シフト
+    let arithmetic_shift_m: i8 = arithmetic_shift_p << 2; // 2ビット左算術シフト
+    println!("0b1100_0000 >> 2 = 0b{:08b}", arithmetic_shift_k);
+    println!("0b1100_0000 << 2 = 0b{:08b}", arithmetic_shift_m);
 }
 
 fn a() -> bool {
