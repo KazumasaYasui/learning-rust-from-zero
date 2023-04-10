@@ -82,6 +82,13 @@ fn main() {
     let arithmetic_shift_m: i8 = arithmetic_shift_p << 2; // 2ビット左算術シフト
     println!("0b1100_0000 >> 2 = 0b{:08b}", arithmetic_shift_k);
     println!("0b1100_0000 << 2 = 0b{:08b}", arithmetic_shift_m);
+
+    // ビット演算の例
+    let bit_a: u8 = 0b1110_0100;
+    let bit_b: u8 = 0b0100_0110;
+    println!("0b1110_0100 | 0b0100_0110 = 0b{:08b}", bit_a | bit_b); // bit_a と bit_b の論理和
+    println!("0b1110_0100 & 0b0100_0110 = 0b{:08b}", bit_a & bit_b); // bit_a と bit_b の論理積
+    println!("0b1110_0100 ^ 0b0100_0110 = 0b{:08b}", bit_a ^ bit_b); // bit_a と bit_b の排他的論理和
 }
 
 fn a() -> bool {
