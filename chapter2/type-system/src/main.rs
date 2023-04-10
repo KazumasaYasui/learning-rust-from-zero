@@ -68,6 +68,13 @@ fn main() {
     println!("5.6 > 14.6    = {}", gt_f);
     println!("57.2 >= 43.2  = {}", gteq_f);
     println!("145.6 == 23.4 = {}", eq_f);
+
+    // ビットシフトの例
+    let bit_shift_n: u8 = 0b0001_1000;
+    let bit_shift_m: u8 = bit_shift_n << 2; // 2ビット左シフト
+    let bit_shift_k: u8 = bit_shift_n >> 2; // 2ビット右シフト
+    println!("0b0001_1000 << 2 = 0b{:08b}", bit_shift_m);
+    println!("0b0001_1000 >> 2 = 0b{:08b}", bit_shift_k);
 }
 
 fn a() -> bool {
